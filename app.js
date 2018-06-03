@@ -1,19 +1,19 @@
-let express = require("express");
+const express = require("express");
 
-let app = express();
-let handlebars = require("express-handlebars").create({defaultLayout:"main"});
+const app = express();
+const handlebars = require("express-handlebars").create({defaultLayout:"main"});
 
 app.engine("handlebars", handlebars.engine);
 app.set("view engine", "handlebars");
 app.set("port", 3000);
 
 let visitors = 0;
-let PRIZE_VISITOR = 20;
+const PRIZE_VISITOR = 20;
 
 app.get("/", function(req, res) {
 
 	// define context to send to handlebars
-	let context = {};
+	const context = {};
 
 	// build params and set visitor number
 	context.visitor_number = visitors;
