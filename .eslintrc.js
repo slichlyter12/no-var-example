@@ -26,9 +26,9 @@ module.exports = {
         "no-var": [
             "error"
             // "warning"
-        ],
-        "prefer-const": [
-            "error"
         ]
+        // "prefer-const": [
+        //     "error"
+        // ]
     }
 };
